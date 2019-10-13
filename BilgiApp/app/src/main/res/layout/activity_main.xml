@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivIcon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="100dp"
+            android:src="@drawable/logo">
+        </ImageView>
+
+        <EditText
+            android:id="@+id/etMail"
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:backgroundTint="@color/colorAccent"
+            android:hint="E-posta"
+            android:textColor="@color/colorAccent"
+            android:textColorHint="@color/colorAccent"
+            android:nextFocusDown="@id/etPassword"
+            android:digits="0123456789qwertyuopasdfghjklizxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM@.">
+            <requestFocus />
+        </EditText>
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:backgroundTint="@color/colorAccent"
+            android:hint="Parola"
+            android:textColor="@color/colorAccent"
+            android:textColorHint="@color/colorAccent"
+            android:digits="0123456789qwertyuopasdfghjklizxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM@.">
+        </EditText>
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="25dp"
+            android:background="@color/colorBtn"
+            android:text="Giriş"
+            android:textColor="@color/colorAccent">
+        </Button>
+
+        <TextView
+            android:id="@+id/tvSignup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kayıt olmak için tıklayın"
+            android:layout_gravity="center"
+            android:textColor="@color/colorAccent"
+            android:textSize="15sp"
+            android:layout_marginTop="15dp"
+            >
+        </TextView>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
