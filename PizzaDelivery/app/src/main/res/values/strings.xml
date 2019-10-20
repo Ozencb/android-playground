@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PizzaDelivery</string>
+
+    <string name="img_small">50dp</string>
+    <string name="img_medium">75dp</string>
+    <string name="img_big">100dp</string>
+</resources>

@@ -32,7 +32,7 @@ public class LoginMessage extends AppCompatActivity {
         if (mail.equals(correctMail) && password.equals(correctPassword)){
             ivStatus.setBackgroundResource(R.drawable.success);
 
-            CountDownTimer Count = new CountDownTimer(3000, 1000) {
+            CountDownTimer Count = new CountDownTimer(4000, 1000) {
                 public void onTick(long millisUntilFinished) {
                     tvMessage.setText("Giriş Başarılı. " + millisUntilFinished / 1000 + " saniye içinde önceki ekrana dönülecek.");
                 }
@@ -47,7 +47,7 @@ public class LoginMessage extends AppCompatActivity {
         else {
             ivStatus.setBackgroundResource(R.drawable.fail);
 
-            CountDownTimer Count = new CountDownTimer(3000, 1000) {
+            CountDownTimer Count = new CountDownTimer(4000, 1000) {
                 public void onTick(long millisUntilFinished) {
                     tvMessage.setText("Hatalı Giriş. " + millisUntilFinished / 1000 + " saniye içinde önceki ekrana dönülecek.");
                 }

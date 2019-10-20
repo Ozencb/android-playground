@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical"
+    tools:context=".OrderActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="30dp">
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginBottom="25dp"
+                android:layout_gravity="center"
+                android:gravity="center">
+                <LinearLayout
+                    android:id="@+id/llSize"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    >
+                    <ImageView
+                        android:id="@+id/ivSize"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/pizzaldpi"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:background="@drawable/element_bg"
+                android:orientation="horizontal">
+
+                <SeekBar
+                    android:id="@+id/sbSize"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorAccent"
+                    android:thumbTint="@color/colorAccent"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:background="@drawable/element_bg"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spPizzaType"
+                    style="@style/spinnerStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:background="@drawable/element_bg"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spBorder"
+                    style="@style/spinnerStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+            <RadioGroup
+                android:id="@+id/rgCrust"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:background="@drawable/element_bg"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:weightSum="2"
+                android:checkedButton="@id/crustClassic">
+
+                <RadioButton
+                    android:id="@+id/crustClassic"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/colorAccent"
+                    android:text="Klasik"
+                    android:textColor="@color/colorAccent" />
+
+                <RadioButton
+                    android:id="@+id/crustThin"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/colorAccent"
+                    android:buttonTint="@color/colorAccent"
+                    android:text="İnce"
+                    android:textColor="@color/colorAccent" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:background="@drawable/element_bg"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <CheckBox
+                        android:id="@+id/cbExtra1"
+                        style="@style/checkboxStyle"
+                        android:text="Mozarella" />
+
+                    <CheckBox
+                        android:id="@+id/cbExtra2"
+                        style="@style/checkboxStyle"
+                        android:text="Mısır" />
+
+                    <CheckBox
+                        android:id="@+id/cbExtra3"
+                        style="@style/checkboxStyle"
+                        android:text="Zeytin" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <CheckBox
+                        android:id="@+id/cbExtra4"
+                        style="@style/checkboxStyle"
+                        android:text="Sosis" />
+
+                    <CheckBox
+                        android:id="@+id/cbExtra5"
+                        style="@style/checkboxStyle"
+                        android:text="Mantar" />
+
+                    <CheckBox
+                        android:id="@+id/cbExtra6"
+                        style="@style/checkboxStyle"
+                        android:text="Jambon" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/element_bg"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <Spinner
+                    android:id="@+id/spDrinks"
+                    style="@style/spinnerStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="0dp"
+                    android:layout_weight="7" />
+
+                <Button
+                    android:id="@+id/btnDecrementDrink"
+                    style="@style/buttonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="0dp"
+                    android:layout_weight="1"
+                    android:text="-" />
+
+                <TextView
+                    android:id="@+id/tvDrinkQuantity"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="1"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorAccent" />
+
+                <Button
+                    android:id="@+id/btnIncrementDrink"
+                    style="@style/buttonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="0dp"
+                    android:layout_weight="1"
+                    android:text="+" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnOrder"
+                style="@style/buttonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Next" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
