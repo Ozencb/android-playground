@@ -12,38 +12,38 @@
         android:layout_height="wrap_content"
         android:id="@+id/ivIcon"
         android:src="@drawable/logo"
-        android:layout_marginBottom="50dp"/>
+        android:layout_marginBottom="50dp" />
 
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/etName"
-        android:hint="Name"
+        android:hint="İsim"
         android:backgroundTint="@color/colorAccent"
         android:textColorHint="@color/colorAccent"
         android:textColor="@color/colorAccent"
         android:textAlignment="center"
         android:nextFocusDown="@id/etLastname"
         android:inputType="textCapSentences"
-        android:digits="0123456789qwertyuopasdfghjklizxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM@."/>
+        android:digits="0123456789qwertyuopasdfghjklizxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM@." />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/etLastname"
-        android:hint="Last name"
+        android:hint="Soyisim"
         android:backgroundTint="@color/colorAccent"
         android:textColorHint="@color/colorAccent"
         android:textColor="@color/colorAccent"
         android:textAlignment="center"
         android:inputType="textCapSentences"
-        android:digits="0123456789qwertyuopasdfghjklizxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM@."/>
+        android:digits="0123456789qwertyuopasdfghjklizxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM@." />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btnLogin"
         style="@style/buttonStyle"
-        android:text="Next"/>
+        android:text="İLERİ" />
 </LinearLayout>

@@ -1,7 +1,5 @@
 package com.example.pizzadelivery;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -9,8 +7,9 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,10 +32,9 @@ public class MainActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (etName.getText().toString().isEmpty() || etLastname.getText().toString().isEmpty()){
+                if (etName.getText().toString().isEmpty() || etLastname.getText().toString().isEmpty()) {
                     Toast.makeText(getApplicationContext(), "Lütfen ad ve soyadinizi giriniz", Toast.LENGTH_SHORT).show();
-                }
-                else {
+                } else {
                     Intent i = new Intent(getApplicationContext(), OrderActivity.class);
                     i.putExtra("Name", etName.getText().toString());
                     i.putExtra("Lastname", etLastname.getText().toString());

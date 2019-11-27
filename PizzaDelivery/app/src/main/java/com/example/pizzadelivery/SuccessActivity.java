@@ -1,13 +1,11 @@
 package com.example.pizzadelivery;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
 
-import java.util.Arrays;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class SuccessActivity extends AppCompatActivity {
 
@@ -23,15 +21,16 @@ public class SuccessActivity extends AppCompatActivity {
     private static String strArrayToStr(String[] theArray) {
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < theArray.length; i++) {
-            if(theArray[i] != null){
+            if (theArray[i] != null) {
                 String item = theArray[i];
                 sb.append(item);
                 if (i >= 0) {
                     sb.append(", ");
                 }
             }
-
         }
+        sb.deleteCharAt(sb.length()-1);
+        sb.deleteCharAt(sb.length()-1);
         return sb.toString();
     }
 
@@ -62,26 +61,24 @@ public class SuccessActivity extends AppCompatActivity {
         tvResult = findViewById(R.id.tvResult);
         tvPrice = findViewById(R.id.tvPrice);
 
-        for(String item : selectedIngredients){
-            if(item != null){
+        for (String item : selectedIngredients) {
+            if (item != null) {
                 ingredientCount++;
             }
         }
 
-        if(ingredientCount > 2){
-            finalPrice += ingredientCount * 1.5;
+        if (ingredientCount > 2) {
+            finalPrice += (ingredientCount - 2) * 1.5;
         }
 
-        if(drinkQuantity >= 0){
+        if (drinkQuantity >= 0) {
             finalPrice += drinkQuantity * 3;
         }
 
-        if(selectedSize == 1){
+        if (selectedSize == 1) {
             finalPrice += 5;
             size = "Orta";
-        }
-
-        else if(selectedSize == 2){
+        } else if (selectedSize == 2) {
             finalPrice += 10;
             size = "Büyük";
         }
@@ -89,9 +86,9 @@ public class SuccessActivity extends AppCompatActivity {
         successMessage = "Hoş geldiniz, " + name + " " + lastName;
 
         resultMessage = "\nSipariş listeniz:\n";
-        resultMessage += "\n- " + size + " boy, " + selectedBorder + " kenarlı ve " + selectedCrust.toLowerCase() + " hamurlu " +  selectedPizza;
+        resultMessage += "\n- " + size + " boy, " + selectedBorder.toLowerCase() + " kenarlı ve " + selectedCrust.toLowerCase() + " hamurlu " + selectedPizza;
 
-        if(ingredientCount > 0){
+        if (ingredientCount > 0) {
             resultMessage += "\n- Ekstra olarak: " + ingredients;
         }
         resultMessage += "\n- " + drinkQuantity + " adet " + selectedDrink + "\n\n";

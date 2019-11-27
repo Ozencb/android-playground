@@ -2,7 +2,6 @@ package com.example.pizzadelivery;
 
 import android.content.Context;
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
@@ -23,7 +22,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class OrderActivity extends AppCompatActivity {
-    public static float convertDpToPixel(float dp, Context context){
+    public static float convertDpToPixel(float dp, Context context) {
         return dp * ((float) context.getResources().getDisplayMetrics().densityDpi / DisplayMetrics.DENSITY_DEFAULT);
     }
 
@@ -88,7 +87,6 @@ public class OrderActivity extends AppCompatActivity {
         sbSize.setProgress(0);
 
 
-
         String[] pizzas = {
                 "Napoletana", "Sicilian", "Lazio", "Margherita", "Marinara"
         };
@@ -103,7 +101,6 @@ public class OrderActivity extends AppCompatActivity {
 
 
         final CheckBox[] ingredients = {cbExtra1, cbExtra2, cbExtra3, cbExtra4, cbExtra5, cbExtra6};
-
 
 
         sbSize.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -123,7 +120,7 @@ public class OrderActivity extends AppCompatActivity {
                     llSize.requestLayout();
                 } else {
                     llSize.getLayoutParams().height = (int) convertDpToPixel(100, context);
-                    llSize.getLayoutParams().width = (int) convertDpToPixel(100, context);;
+                    llSize.getLayoutParams().width = (int) convertDpToPixel(100, context);
                     selectedSize = 2;
                     llSize.requestLayout();
                 }
@@ -165,7 +162,7 @@ public class OrderActivity extends AppCompatActivity {
             public void onClick(View v) {
                 selectedDrinkQuantity = selectedDrinkQuantity + 1;
 
-                if(selectedDrinkQuantity >= 9){
+                if (selectedDrinkQuantity >= 9) {
                     selectedDrinkQuantity = 9;
                     Toast.makeText(getApplicationContext(), "Tek seferde 9'dan daha fazla içecek siparişi veremezsiniz.", Toast.LENGTH_SHORT).show();
                 }
@@ -179,7 +176,7 @@ public class OrderActivity extends AppCompatActivity {
             public void onClick(View v) {
                 selectedDrinkQuantity = selectedDrinkQuantity - 1;
 
-                if(selectedDrinkQuantity <= 0){
+                if (selectedDrinkQuantity <= 0) {
                     selectedDrinkQuantity = 0;
                 }
 
@@ -198,8 +195,8 @@ public class OrderActivity extends AppCompatActivity {
                 selectedCrust = selectedRb.getText().toString();
 
                 int i = 0;
-                for(CheckBox item : ingredients){
-                    if(item.isChecked()){
+                for (CheckBox item : ingredients) {
+                    if (item.isChecked()) {
                         selectedIngredients[i] = item.getText().toString();
                         i++;
                     }

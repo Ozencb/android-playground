@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menuMain"
+        android:title="Anasayfa" />
+
+    <item
+        android:id="@+id/menuTeams"
+        android:title="Takımlar" />
+
+    <item
+        android:id="@+id/menuGames"
+        android:title="Karşılaşmalar" />
+</menu>

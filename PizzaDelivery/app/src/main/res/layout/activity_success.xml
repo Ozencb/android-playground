@@ -15,7 +15,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
         android:layout_marginBottom="25dp"
-        android:src="@drawable/onway"/>
+        android:src="@drawable/onway" />
 
     <TextView
         android:id="@+id/tvSuccess"
@@ -24,7 +24,7 @@
         android:textColor="@color/colorAccent"
         android:textAlignment="center"
         android:textSize="30sp"
-        android:text=""/>
+        android:text="" />
 
     <TextView
         android:id="@+id/tvResult"
@@ -33,7 +33,7 @@
         android:textColor="@color/colorAccent"
         android:textAlignment="textStart"
         android:textSize="15sp"
-        android:text=""/>
+        android:text="" />
 
     <TextView
         android:id="@+id/tvPrice"
@@ -43,8 +43,7 @@
         android:textAlignment="center"
         android:textSize="25sp"
         android:text=""
-        android:background="@drawable/element_bg"/>
-
+        android:background="@drawable/element_bg" />
 
 
 </LinearLayout>
