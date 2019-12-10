@@ -5,41 +5,26 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity"
-    android:padding="10dp">
+    android:padding="10dp"
+    android:background="@drawable/bg">
 
     <LinearLayout
         android:id="@+id/topBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:weightSum="3"
         android:layout_gravity="center"
-        android:padding="10dp">
+        android:padding="10dp"
+        android:layout_margin="25dp">
 
         <TextView
             android:id="@+id/tvScore"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textSize="20sp"
+            android:textSize="25sp"
+            android:textAlignment="center"
             android:text="Skor:"/>
-
-        <TextView
-            android:id="@+id/tvTime"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="20sp"
-            android:text="Süre:"/>
-
-        <TextView
-            android:id="@+id/tvLevel"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="20sp"
-            android:text="Seviye:"/>
-
     </LinearLayout>
 
     <GridView
