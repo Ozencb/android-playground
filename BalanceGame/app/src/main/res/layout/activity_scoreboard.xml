@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Scoreboard"
+        android:orientation="vertical"
+        android:background="@color/background">
+
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/tvMessage"
+              android:textAlignment="center" android:textSize="35sp" android:textColor="@color/colorPrimary"
+              android:layout_marginTop="150dp"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/tvScore"
+              android:textAlignment="center" android:textSize="50sp" android:textColor="@color/colorPrimary"
+              android:layout_marginTop="25dp"/>
+
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/btnRestart" android:textSize="25sp"
+            android:text="Yeniden Dene" android:layout_gravity="center" android:layout_marginTop="100dp"
+            android:textColor="@color/colorPrimary" android:background="@color/background" style="?android:attr/borderlessButtonStyle"/>
+
+</LinearLayout>
